@@ -1,7 +1,7 @@
 var string='';
 function dwarfRollCall(dwarves) {
-  for (var i=0; i<dwarves.length; i++) {
-  string += i+1 + '. ' + dwarves[i] + ' ';
+  for (var i=dwarves.length/2; i<dwarves.length; i++) {
+  string += `${(i+1)}. ${dwarves[i]} `;
 }
   return string;
 }
@@ -14,10 +14,12 @@ function summonCaptainPlanet(planeteerCalls){
 }
 
 function longPlaneteerCalls(words) {
- var boo='';
+ var long = false;
  for (var i=0; i<words.length; i++) {
- boo += Boolean (words[i].length > 4)}
- return Boolean (boo.indexOf(true) !== -1);
+ if (words[i].length > 4) {
+   long = true
+ }}
+ return long;
 }
 
 function findTheCheese (foods) {
@@ -29,4 +31,13 @@ function findTheCheese (foods) {
       return foods[i];
     }}
     return 'no cheese!';
+  }
+
+function wordsWithB (words) {
+  var arr = [];
+  for (var i=0; i<words.length; i++) {
+    if (words[i].startsWith('b') === true) {
+      arr.push (words[i]);
+    }}
+    return arr;
   }
